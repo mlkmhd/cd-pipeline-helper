@@ -1,0 +1,15 @@
+resources:
+- all.yaml
+patches:
+  - path: creds/deployments.yaml
+    target:
+      kind: Deployment
+      name: ".*"
+  - path: creds/jobs.yaml
+    target:
+      kind: Job
+      name: ".*"
+  - path: creds/statefulsets.yaml
+    target:
+      kind: StatefulSet
+      name: ".*"
